@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>আমাদের বিদ্যালয় | Online Admission</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(135deg, #075e54, #128c7e);
+      color: white;
+      text-align: center;
+      padding: 28px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 15px;
+    }
+
+    nav {
+      background: white;
+      padding: 12px;
+      text-align: center;
+      box-shadow: 0 2px 8px #0002;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #075e54;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 15px;
+      background: #e8f5f2;
+    }
+
+    .hero h2 {
+      color: #075e54;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #075e54;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 15px #0001;
+    }
+
+    .card h2 {
+      text-align: center;
+      color: #075e54;
+      margin-bottom: 22px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #bbb;
+      border-radius: 7px;
+      font-size: 15px;
+    }
+
+    textarea {
+      height: 90px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 22px;
+      font-size: 16px;
+    }
+
+    #message {
+      display: none;
+      margin-top: 18px;
+      padding: 15px;
+      background: #e7f7ed;
+      color: #146c2e;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 40px;
+      background: #075e54;
+      color: white;
+      text-align: center;
+      padding: 22px 10px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      .container {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>আমাদের বিদ্যালয়</h1>
+    <p>Online Admission Portal</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#admission">Admission</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <h2>বিদ্যালয়ে নতুন ভর্তি শুরু হয়েছে</h2>
+    <p>অনলাইনে ভর্তি ফর্ম পূরণ করুন</p>
+    <a href="#admission" class="btn">Apply Now</a>
+  </section>
+
+  <div class="container" id="admission">
+
+    <div class="card">
+
+      <h2>Online Admission Form</h2>
+
+      <form id="admissionForm">
+
+        <label>Student Name</label>
+        <input type="text" name="studentName"
+               placeholder="শিক্ষার্থীর নাম" required>
+
+        <label>Date of Birth</label>
+        <input type="date" name="dob" required>
+
+        <label>Gender</label>
+        <select name="gender" required>
+          <option value="">Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+
+        <label>Admission Class</label>
+        <select name="class" required>
+          <option value="">Select Class</option>
+          <option>Class V</option>
+          <option>Class VI</option>
+          <option>Class VII</option>
+          <option>Class VIII</option>
+          <option>Class IX</option>
+          <option>Class X</option>
+          <option>Class XI</option>
+          <option>Class XII</option>
+        </select>
+
+        <label>Guardian Name</label>
+        <input type="text" name="guardian"
+               placeholder="অভিভাবকের নাম" required>
+
+        <label>Mobile Number</label>
+        <input type="tel" name="mobile"
+               placeholder="মোবাইল নম্বর" required>
+
+        <label>Address</label>
+        <textarea name="address"
+                  placeholder="সম্পূর্ণ ঠিকানা" required></textarea>
+
+        <button type="submit" class="btn submit-btn">
+          Submit Application
+        </button>
+
+      </form>
+
+      <div id="message">
+        আপনার আবেদনটি Demo হিসেবে গ্রহণ করা হয়েছে।
+      </div>
+
+    </div>
+  </div>
+
+  <footer id="contact">
+    <p>© 2026 আমাদের বিদ্যালয়</p>
+    <p>School Admission Portal</p>
+  </footer>
+
+  <script>
+    document.getElementById("admissionForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        document.getElementById("message").style.display = "block";
+
+        this.reset();
+
+        window.scrollTo({
+          top: document.getElementById("message").offsetTop - 100,
+          behavior: "smooth"
+        });
+      });
+  </script>
+
+</body>
+</html>
